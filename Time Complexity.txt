@@ -1,0 +1,15 @@
+Time Complexity       Name  			example
+	
+    1				constant 			adding 1 element to front of link list
+
+    logn            logarithmic 		finding n element from sorted array
+
+    n		        linear				finding n from unsorted Array
+
+    nlogn 			linear logarithmic  sorting array using divide and conquer algorithm
+
+    n^2				Quadratic			shortest path between two nodes
+
+    n^3				cubic				matrix multiplication
+    
+    2^n             Exponential			the two tower of hanoi

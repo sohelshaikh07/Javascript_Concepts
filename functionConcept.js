@@ -2,8 +2,6 @@
 
 
 //arguments object
-
-
 //1) First Example
 //in case of normal function
 var myobj1={
@@ -53,9 +51,63 @@ var arrowFun2=()=>{
 
 
 // 3)
-
 var arrowFun2=()=>{
 			console.log(arguments);//functionConcept.js:58 Uncaught ReferenceError: arguments is not defined
 		}
 
-// arrowFun2(1,2,3,4);	
+// arrowFun2(1,2,3,4);
+
+
+
+//this keyword behaviour in both cases
+
+
+let me={
+	name:'sohel shaikh',
+	thisInArrow:()=>{
+		console.log("hey my self "+this.name);//hey my self
+	},
+	thisInNormal(){
+		console.log("hey my self "+this.name);//hey my self sohel shaikh
+	}
+}
+
+// me.thisInArrow();//hey my self
+// me.thisInNormal();//hey my self sohel shaikh
+
+
+
+
+
+
+// 'use strict'
+// function Normal(x,x) {
+// 	console.log(x);
+// 	console.log(arguments);
+// }
+
+// Normal(2, 3);
+
+// var add = (a, b) => {
+// 	console.log("asdsf ", (a + b));
+// 	console.log(this);
+// }
+
+// console.log(add)
+// new add(2, 5);
+
+
+
+function Normal() {
+	console.log(this);
+	// console.log(arguments);
+}
+
+
+// Normal();
+
+let myObj = {
+	innerNormal:Normal
+}
+
+myObj.innerNormal();
